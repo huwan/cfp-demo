@@ -1,0 +1,41 @@
+	<div class="hideable" id="highlight">
+		<header class="hide-head nowrap">
+			<h2>{{ .Site.Params.highlight.title }}</h2>
+		</header>
+		<div class="hide-body">
+			<div class="table-responsive">
+				<table class="table table-bordered table-condensed">
+					<thead>
+						<tr>
+							<th>{{ .Site.Params.highlight.name }}</th>
+							<th>{{ .Site.Params.highlight.rank }}</th>
+							<th>{{ .Site.Params.highlight.absddl }}</th>
+							<th>{{ .Site.Params.highlight.submddl }}</th>
+							<th>{{ .Site.Params.highlight.notidue }}</th>
+							<th>{{ .Site.Params.highlight.when }}</th>
+							<th>{{ .Site.Params.highlight.countdown }}</th>
+						</tr>
+					</thead>
+					<tbody>
+{{- range $p := sort .Site.Params.cfp.list "submddl" -}}
+{{ if (eq .enable 2) }}
+						<tr class="item" style="background-color:purple;color:white">
+							<th scope="row">
+								<a class="hl" href="{{ $p.site }}" target="_blank">{{ $p.name }} {{ (time $p.open).Year }}</a>
+							</th>
+							<td>{{ $p.rank | markdownify }}</td>
+							<td>{{ if ne $p.absddl "N/A" }} {{ dateFormat "Jan 2, 2006" $p.absddl}} {{ else }} {{ $p.absddl }} {{ end }}</td>
+							<td>{{ if ne $p.submddl "TBA" }}{{ dateFormat "Jan 2, 2006" $p.submddl}}{{ else }}{{ $p.submddl }}{{ end }}</td>
+							<td>{{ if ne $p.notidue "TBA" }}{{ dateFormat "Jan 2, 2006" $p.notidue}}{{ else }}{{ $p.notidue }}{{ end }}</td>
+							<td>{{ dateFormat "Jan 2" $p.open}}-{{ if ne (time $p.open).Month (time $p.close).Month }}{{ dateFormat "Jan" $p.close }} {{ end }}{{ dateFormat "2, 2006" $p.close }}</td>
+							<td>
+								<div id="countdown"></div>
+							</td>
+						</tr>
+{{- end -}}
+{{- end }}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>

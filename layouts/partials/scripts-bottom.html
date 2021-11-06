@@ -1,0 +1,78 @@
+	<script>
+		var el = document.getElementsByTagName("body")[0];
+		el.className = "js";
+	</script>
+	<script src="assets/js/w3.js"></script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/jquery.dblp-2014-08-07.min.js"></script>
+	<script src="assets/js/jquery.cookie-1.2.min.js"></script>
+	<script src="assets/js/encoder-2012-09-23.min.js"></script>
+	<script src="assets/js/buckets-1.0.min.js"></script>
+	<script src="assets/js/dblp-2015-02-11.min.js"></script>
+	<script src="assets/js/dblp-ui-2014-06-16.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.timeline.min.js"></script>
+	<script src="assets/js/jquery.countdown.min.js"></script>
+	<script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/moment-timezone-with-data-2012-2022.min.js"></script>
+	<script>
+		var deadline = moment.tz("{{- range .Site.Params.cfp.list -}} {{- if eq .enable 2 -}} {{- dateFormat `2006-01-02 15:04:05` (time .submddl).Local -}} {{- end -}} {{- end -}}", "Asia/Hong_Kong");
+		$('#countdown').countdown(deadline.toDate(), function(event) {
+			$(this).html(event.strftime('%D days %H:%M:%S'));
+			});
+
+	$('[data-countdown]').each(function() {
+			var $this = $(this),
+			finalDate = $(this).data('countdown');
+			$this.countdown(finalDate, function(event) {
+					var output = "0 days";
+					if (event.offset.totalDays > 1) {
+					  output = '%-D days';
+					} else if (event.offset.totalDays > 0) {
+					  output = '%-D day';
+					} else if (event.offset.hours > 1) {
+					  output = '%-H hours';
+					} else if (event.offset.hours > 0) {
+					  output = '%-H hour';
+					}
+					$this.html(event.strftime(output));
+				});
+			});
+	</script>
+	<script>
+	let timeline_options = {
+		type          : 'bar',
+		startDatetime : 'currently',
+		endDatetime   : 'auto',
+		range         : 12,
+		scale         : 'day',
+		rows          : 3,
+		minGridSize   : 24 * 2,
+		rangeAlign    : 'begin',
+                hideScrollbar : true,
+		sidebar       : {
+			sticky : true,
+			list   : [
+				'Upcoming calls',
+				'Upcoming confs',
+				'Future confs',
+			]
+		},
+		ruler         : {
+			top    : {
+				lines      : [ 'month', 'day', 'weekday' ],
+				height     : 26,
+				fontSize   : 13,
+				color      : '#777',
+				background : '#FFF',
+				format     : { timeZone: 'Asia/Hong_Kong', hour12: false, year: 'zerofill', month: 'long', day:"numeric", weekday: 'short', hour: 'numeric', minute: 'numeric' },
+			},
+		}
+	}
+	$('#my-timeline').Timeline( timeline_options )
+	.tooltip({
+		selector: '[data-toggle="tooltip"]',
+		html: true
+	});
+	</script>

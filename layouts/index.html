@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{{ partial "lang.html" . -}}
+
+<head>
+{{ partial "head.html" . -}}
+</head>
+
+<body class="no-js" style="overflow-y: scroll;">
+	<div id="main">
+{{ if .Site.Params.intro.enable -}}
+{{ partial "intro.html" . }}
+{{- end -}}
+
+{{ if .Site.Params.timeline.enable }}
+{{ partial "timeline.html" . }}
+{{- end -}}
+
+{{ if .Site.Params.highlight.enable }}
+{{ partial "highlight.html" . }}
+{{ end -}}
+
+{{ if .Site.Params.upcoming.enable }}
+{{ partial "upcoming.html" . }}
+{{- end -}}
+
+{{ if .Site.Params.current.enable }}
+{{ partial "current.html" . }}
+{{- end -}}
+
+{{ if .Site.Params.past.enable }}
+{{ partial "past.html" . }}
+{{- end -}}
+
+{{ if .Site.Params.info.enable }}
+{{ partial "info.html" . }}
+{{ end -}}
+
+{{ partial "footer.html" . }}
+	</div> {{ "<!-- main -->" | safeHTML }}
+{{ partial "scripts-bottom.html" . }}
+</body>
+</html>

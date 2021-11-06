@@ -1,0 +1,29 @@
+	<div id="my-timeline">
+	    <ul class="timeline-events">
+{{- range $p := .Site.Params.cfp.list -}}
+{{ if or (eq .enable 0) (eq $p.submddl "TBA") }}
+{{- else if ((time $p.submddl).After now)}}
+{{- if eq $p.absddl "N/A" }}
+		<li data-timeline-node="{start:'{{ dateFormat `2006-01-02 15:04:05` ((time $p.submddl).Local.AddDate 0 0 -1) }}',end:'{{ dateFormat `2006-01-02 15:04:05` (time $p.submddl).Local }}',row:1,bgColor:'Wheat',color:'Black', extend:'{toggle:\'tooltip\'}'}"><strong class="event-label">{{ $p.name }} {{ (time $p.open).Year }}</strong><p class="event-content">CCF Rank: {{ $p.rank }}, When: {{ dateFormat "Jan 2" $p.open}}-{{ if ne (time $p.open).Month (time $p.close).Month }}{{ dateFormat "Jan" $p.close }} {{ end }}{{ dateFormat "2, 2006" $p.close }}, Abstract Deadline: {{ $p.absddl }}, Submission Deadline: {{  dateFormat "2006-01-02 15:04:05 MST" (time $p.submddl).Local }}, Notification Due: {{ $p.notidue }}</p></li>
+{{- else }}
+		<li data-timeline-node="{start:'{{ dateFormat `2006-01-02 15:04:05` (time $p.absddl).Local }}',end:'{{ dateFormat `2006-01-02 15:04:05` (time $p.submddl).Local }}',row:1,bgColor:'Wheat',color:'Black', extend:'{toggle:\'tooltip\'}'}"><strong class="event-label">{{ $p.name }} {{ (time $p.open).Year }}</strong><p class="event-content">CCF Rank: {{ $p.rank }}, When: {{ dateFormat "Jan 2" $p.open}}-{{ if ne (time $p.open).Month (time $p.close).Month }}{{ dateFormat "Jan" $p.close }} {{ end }}{{ dateFormat "2, 2006" $p.close }}, Abstract Deadline: {{ dateFormat "2006-01-02 15:04:05 MST" (time $p.absddl).Local }}, Submission Deadline: {{ dateFormat "2006-01-02 15:04:05 MST" (time $p.submddl).Local }}, Notification Due: {{  $p.notidue }}</p></li>
+{{- end }}
+		<li data-timeline-node="{start:'{{ dateFormat `2006-01-02 15:04:05` (time $p.open) }}',end:'{{ dateFormat `2006-01-02 15:04:05` (time $p.close) }}',row:3,bgColor:'#e05f1a',color:'White', extend:'{toggle:\'tooltip\'}'}"><strong class="event-label">{{ $p.name }} {{ (time $p.open).Year }}</strong><p class="event-content">CCF Rank: {{ $p.rank }}, When: {{ dateFormat "Jan 2" $p.open}}-{{ if ne (time $p.open).Month (time $p.close).Month }}{{ dateFormat "Jan" $p.close }} {{ end }}{{ dateFormat "2, 2006" $p.close }}, Abstract Deadline: {{ $p.absddl }}, Submission Deadline: {{ $p.submddl }}, Notification Due: {{ $p.notidue }}</p></li>
+{{- end -}}
+{{- end -}}
+{{- range $p := .Site.Params.cfp.list -}}
+{{ if or (eq .enable 0) (eq $p.submddl "TBA") }}
+{{- else if and ((time $p.submddl).Before now) ((time $p.close).After now) }}
+		<li data-timeline-node="{start:'{{ dateFormat `2006-01-02 15:04:05` (time $p.open) }}',end:'{{ dateFormat `2006-01-02 15:04:05` (time $p.close) }}',row:2,bgColor:'#63bb55',color:'Black', extend:'{toggle:\'tooltip\'}'}"><strong class="event-label">{{ $p.name }} {{ (time $p.open).Year }}</strong><p class="event-content">CCF Rank: {{ $p.rank }}, When: {{ dateFormat "Jan 2" $p.open}}-{{ if ne (time $p.open).Month (time $p.close).Month }}{{ dateFormat "Jan" $p.close }} {{ end }}{{ dateFormat "2, 2006" $p.close }}, Abstract Deadline: {{ $p.absddl }}, Submission Deadline: {{ $p.submddl }}, Notification Due: {{ $p.notidue }}</p></li>
+{{- end -}}
+{{ end }}
+{{- range $p := .Site.Params.cfp.list -}}
+{{ if (eq .enable 0) }}
+{{- else if and (eq $p.submddl "TBA") ((time $p.close).After now) }}
+		<li data-timeline-node="{start:'{{ dateFormat `2006-01-02 15:04:05` (time $p.open) }}',end:'{{ dateFormat `2006-01-02 15:04:05` (time $p.close) }}',row:3,bgColor:'#e05f1a',color:'White', extend:'{toggle:\'tooltip\'}'}"><strong class="event-label">{{ $p.name }} {{ (time $p.open).Year }}</strong><p class="event-content">CCF Rank: {{ $p.rank }}, When: {{ dateFormat "Jan 2" $p.open}}-{{ if ne (time $p.open).Month (time $p.close).Month }}{{ dateFormat "Jan" $p.close }} {{ end }}{{ dateFormat "2, 2006" $p.close }}, Abstract Deadline: {{ $p.absddl }}, Submission Deadline: {{ $p.submddl }}, Notification Due: {{ $p.notidue }}</p></li>
+{{- end -}}
+{{ end }}
+	    </ul>
+	</div>
+
+	<div class="timeline-event-view"></div>
