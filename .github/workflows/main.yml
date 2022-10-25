@@ -10,18 +10,18 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Setup timezone
-        uses: zcong1993/setup-timezone@v1.1.1
+        uses: zcong1993/setup-timezone@master
         with:
           timezone: Asia/Hong_Kong
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Nested checkout branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           ref: gh-pages
           path: public
@@ -29,7 +29,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.68.3'
+          hugo-version: '0.91.2'
 
       - name: Build
         run: hugo
