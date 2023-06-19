@@ -36,7 +36,7 @@ copyright = "Theme designed by [dblp](https://dblp.uni-trier.de/), customized by
 
 # Timeline section
 [params.timeline]
-enable = true
+enable = false
 
 # Highlight section
 [params.highlight]
@@ -92,36 +92,36 @@ countdown = "Event Status"
 #         must two digits for each field
 [[params.cfp.list]]
 enable = 1
-name = "ASPLOS Summer"
+name = "ASPLOS Summer*"
 rank = "A"
 site = "https://asplos-conference.org/"
-open = "2023-02-28"
-close = "2023-03-04 23:59:59 -04:00"
-absddl = "2022-06-30 17:59:59 -04:00"
-submddl = "2022-07-07 17:59:59 -04:00"
-notidue = "2022-09-22"
+open = "2024-04-25"
+close = "2024-04-29 23:59:59 -04:00"
+absddl = "2023-08-03 17:59:59 -04:00"
+submddl = "2023-08-10 17:59:59 -04:00"
+notidue = "2023-11-15"
 
 [[params.cfp.list]]
 enable = 1
-name = "ASPLOS Fall"
+name = "ASPLOS Fall*"
 rank = "A"
 site = "https://asplos-conference.org/"
-open = "2023-02-28"
-close = "2023-03-04 23:59:59 -04:00"
-absddl = "2022-10-13 17:59:59 -04:00"
-submddl = "2022-10-20 17:59:59 -04:00"
-notidue = "2023-01-19"
+open = "2024-04-25"
+close = "2024-04-29 23:59:59 -04:00"
+absddl = "2023-11-23 17:59:59 -04:00"
+submddl = "2023-11-30 17:59:59 -04:00"
+notidue = "2024-03-06"
 
 [[params.cfp.list]]
 enable = 1
 name = "FAST"
 rank = "A"
-site = "https://www.usenix.org/conference/fast23/call-for-papers"
-open = "2023-02-20"
-close = "2023-02-23 23:59:59"
+site = "https://www.usenix.org/conference/fast24/call-for-papers"
+open = "2024-02-27"
+close = "2024-02-29 23:59:59"
 absddl = "N/A"
-submddl = "2022-09-22 23:59:59 -07:00"
-notidue = "2022-12-09"
+submddl = "2023-09-21 23:59:59 -07:00"
+notidue = "2023-12-08"
 
 [[params.cfp.list]]
 enable = 1
@@ -149,23 +149,23 @@ notidue = "2023-03-09"
 enable = 1
 name = "MICRO"
 rank = "A"
-site = "https://www.microarch.org/micro55"
-open = "2022-10-16"
-close = "2022-10-20 23:59:59"
-absddl = "2022-04-14 23:59:59 -07:00"
-submddl = "2022-04-21 23:59:59 -07:00"
-notidue = "2022-07-18"
+site = "https://www.microarch.org/micro56"
+open = "2023-10-28"
+close = "2023-11-01 23:59:59"
+absddl = "2023-04-21 23:59:59 -07:00"
+submddl = "2023-04-28 23:59:59 -07:00"
+notidue = "2023-07-24"
 
 [[params.cfp.list]]
 enable = 1
 name = "SC"
 rank = "A"
-site = "https://sc22.supercomputing.org"
-open = "2022-11-13"
-close = "2022-11-18 23:59:59"
-absddl = "2022-03-25 23:59:00 -12:00"
-submddl = "2022-04-01 23:59:00 -12:00"
-notidue = "2022-06-13"
+site = "https://sc23.supercomputing.org"
+open = "2023-11-12"
+close = "2023-11-17 23:59:59"
+absddl = "2023-03-30 23:59:00 -12:00"
+submddl = "2023-04-06 23:59:00 -12:00"
+notidue = "2023-06-16"
 
 [[params.cfp.list]]
 enable = 1
@@ -231,51 +231,51 @@ open = "2023-04-17"
 close = "2023-04-19 23:59:59"
 absddl = "2022-09-18 23:59:59 -12:00"
 submddl = "2022-09-25 23:59:59 -12:00"
-notidue = "2022-11-11"
+notidue = "2022-11-21"
 
 [[params.cfp.list]]
-enable = 1
+enable = 2
 name = "EuroSys (Spring)"
-rank = "B"
-site = "https://2023.eurosys.org/"
-open = "2023-05-09"
-close = "2023-05-12 23:59:59"
-absddl = "2022-05-11 23:59:59 -12:00"
-submddl = "2022-05-18 23:59:59 -12:00"
-notidue = "2022-08-10 23:59:59 -12:00"
+rank = "A"
+site = "https://www.eurosys.org/news/eurosys-2024"
+open = "2024-04-23"
+close = "2024-04-26 23:59:59"
+absddl = "2023-05-24 23:59:59 -12:00"
+submddl = "2023-05-24 23:59:59 -12:00"
+notidue = "2023-09-12 23:59:59 -12:00"
 
 [[params.cfp.list]]
 enable = 1
 name = "EuroSys (Fall)"
-rank = "B"
-site = "https://2023.eurosys.org/"
-open = "2023-05-09"
-close = "2023-05-12 23:59:59"
-absddl = "2022-10-12"
-submddl = "2022-10-19"
-notidue = "2023-01-18"
+rank = "A"
+site = "https://www.eurosys.org/news/eurosys-2024"
+open = "2024-04-23"
+close = "2024-04-26 23:59:59"
+absddl = "2023-10-19"
+submddl = "2023-10-19"
+notidue = "2024-02-07"
 
 [[params.cfp.list]]
 enable = 1
-name = "HPDC*"
+name = "HPDC"
 rank = "B"
 site = "http://www.hpdc.org/2023/"
 open = "2023-06-16"
 close = "2023-06-23 23:59:59"
-absddl = "2023-01-20 23:59:59 -12:00"
+absddl = "N/A"
 submddl = "2023-01-27 23:59:59 -12:00"
-notidue = "2023-03-31"
+notidue = "2023-03-29"
 
 [[params.cfp.list]]
 enable = 1
 name = "ICCD"
 rank = "B"
 site = "http://www.iccd-conf.com"
-open = "2022-10-23"
-close = "2022-10-26 23:59:59"
-absddl = "2022-06-04 23:59:59 -12:00"
-submddl = "2022-06-11 23:59:59 -12:00"
-notidue = "2022-08-21"
+open = "2023-11-06"
+close = "2023-11-08 23:59:59"
+absddl = "2023-06-09 23:59:59 -12:00"
+submddl = "2023-06-16 23:59:59 -12:00"
+notidue = "2023-08-25"
 
 [[params.cfp.list]]
 enable = 0
@@ -325,23 +325,23 @@ notidue = "2023-03-28"
 enable = 1
 name = "ICPP"
 rank = "B"
-site = "http://www.icpp-conf.org"
-open = "2022-08-29"
-close = "2022-09-01 23:59:59"
-absddl = "2022-04-08 23:59:59 -12:00"
-submddl = "2022-04-14 23:59:59 -12:00"
-notidue = "2022-06-14"
+site = "https://icpp23.sci.utah.edu/"
+open = "2023-08-07"
+close = "2023-08-10 23:59:59"
+absddl = "2023-04-14 23:59:59 -12:00"
+submddl = "2023-04-22 23:59:59 -12:00"
+notidue = "2023-06-16"
 
 [[params.cfp.list]]
 enable = 1
 name = "ICS"
 rank = "B"
-site = "https://ics2022.github.io/"
-open = "2022-06-27"
-close = "2022-06-30 23:59:59"
-absddl = "2022-01-28"
-submddl = "2022-02-04"
-notidue = "2022-04-14"
+site = "https://nschiele.github.io/ICS2023/"
+open = "2023-06-21"
+close = "2023-06-23 23:59:59"
+absddl = "2023-01-27"
+submddl = "2023-02-03"
+notidue = "2023-04-14"
 
 [[params.cfp.list]]
 enable = 1
@@ -359,33 +359,33 @@ enable = 1
 name = "MSST"
 rank = "B"
 site = "http://storageconference.us/"
-open = "2020-10-26"
-close = "2020-10-30 23:59:59"
+open = "2023-05-22"
+close = "2023-05-26 23:59:59"
 absddl = "N/A"
-submddl = "2020-01-07"
-notidue = "2020-02-15"
+submddl = "2023-01-01"
+notidue = "2023-01-01"
 
 [[params.cfp.list]]
 enable = 1
 name = "PACT"
 rank = "B"
-site = "https://pact22.cs.illinois.edu/"
-open = "2022-10-10"
-close = "2022-10-12 23:59:59"
+site = "https://pact2023.github.io/"
+open = "2023-10-21"
+close = "2023-10-25 23:59:59"
 absddl = "N/A"
-submddl = "2022-04-18"
-notidue = "2022-04-25"
+submddl = "2023-04-15"
+notidue = "2023-08-15"
 
 [[params.cfp.list]]
 enable = 1
 name = "OOPSLA"
 rank = "A"
-site = "https://2022.splashcon.org/"
-open = "2022-11-14"
-close = "2022-11-19 23:59:59"
+site = "https://2023.splashcon.org/"
+open = "2023-10-22"
+close = "2023-10-27 23:59:59"
 absddl = "N/A"
-submddl = "2022-04-15"
-notidue = "2022-06-30"
+submddl = "2023-04-14"
+notidue = "2023-06-30"
 
 [[params.cfp.list]]
 enable = 1
@@ -399,7 +399,7 @@ submddl = "2022-09-01 23:59:59 -12:00"
 notidue = "2022-12-09"
 
 [[params.cfp.list]]
-enable = 2
+enable = 1
 name = "OSDI"
 rank = "A"
 site = "https://www.usenix.org/conference/osdi23/"
@@ -433,14 +433,14 @@ notidue = "2022-11-07"
 
 [[params.cfp.list]]
 enable = 1
-name = "SOSP*"
+name = "SOSP"
 rank = "A"
 site = "https://sosp2023.mpi-sws.org/"
 open = "2023-10-23"
 close = "2023-10-26 23:59:59"
-absddl = "2023-04-30 02:59:59 -07:00"
-submddl = "2023-05-07 02:59:59 -07:00"
-notidue = "2023-08-09"
+absddl = "2023-04-10 02:59:59 -07:00"
+submddl = "2023-04-17 02:59:59 -07:00"
+notidue = "2023-07-16"
 
 [[params.cfp.list]]
 enable = 0
@@ -514,44 +514,44 @@ enable = 1
 name = "EMSOFT"
 rank = "B"
 site = "http://www.esweek.org"
-open = "2022-10-07"
-close = "2022-10-14 23:59:59"
-absddl = "2022-03-31 23:59:59 -12:00"
-submddl = "2022-04-07 23:59:59 -12:00"
-notidue = "2022-07-05"
+open = "2023-09-17"
+close = "2023-09-22 23:59:59"
+absddl = "2023-03-16 23:59:59 -12:00"
+submddl = "2023-03-23 23:59:59 -12:00"
+notidue = "2023-05-05"
 
 [[params.cfp.list]]
 enable = 1
 name = "CODES+ISSS"
 rank = "B"
 site = "http://www.esweek.org"
-open = "2022-10-07"
-close = "2022-10-14 23:59:59"
-absddl = "2022-03-31 23:59:59 -12:00"
-submddl = "2022-04-07 23:59:59 -12:00"
-notidue = "2022-07-05"
+open = "2023-09-17"
+close = "2023-09-22 23:59:59"
+absddl = "2023-03-16 23:59:59 -12:00"
+submddl = "2023-03-23 23:59:59 -12:00"
+notidue = "2023-05-05"
 
 [[params.cfp.list]]
 enable = 1
 name = "NVMSA"
 rank = ""
-site = "https://nvmsa2022.github.io/index"
-open = "2022-08-23"
-close = "2022-08-25 23:59:59"
-absddl = "N/A"
-submddl = "2022-04-15 23:59:59 -12:00"
-notidue = "2022-05-31"
+site = "https://nvmsa2023.github.io/index"
+open = "2023-08-30"
+close = "2023-09-01 23:59:59"
+absddl = "2023-04-21"
+submddl = "2023-04-28 23:59:59 -12:00"
+notidue = "2023-05-30"
 
 [[params.cfp.list]]
 enable = 1
 name = "HotStorage"
 rank = ""
-site = "https://www.hotstorage.org/2022/"
-open = "2022-06-27"
-close = "2022-06-28 23:59:59"
+site = "https://www.hotstorage.org/2023/"
+open = "2023-07-09"
+close = "2023-07-09 23:59:59"
 absddl = "N/A"
-submddl = "2022-03-29"
-notidue = "2022-06-06"
+submddl = "2023-03-30"
+notidue = "2023-05-19"
 
 [[params.cfp.list]]
 enable = 1
@@ -580,22 +580,22 @@ enable = 1
 name = "FPL"
 rank = "C"
 site = "https://www.fpl.org/"
-open = "2022-08-29"
-close = "2022-09-02 23:59:59"
-absddl = "2022-03-07"
-submddl = "2022-03-14"
-notidue = "2022-05-09"
+open = "2023-09-04"
+close = "2023-09-08 23:59:59"
+absddl = "2023-03-20"
+submddl = "2023-03-27"
+notidue = "2023-05-23"
 
 [[params.cfp.list]]
 enable = 1
 name = "FPT"
 rank = "C"
 site = "http://www.icfpt.org/"
-open = "2022-12-05"
-close = "2022-12-09 23:59:59"
-absddl = "2022-07-08"
-submddl = "2022-07-15"
-notidue = "2022-09-30"
+open = "2023-12-12"
+close = "2023-12-14 23:59:59"
+absddl = "2023-07-14"
+submddl = "2023-07-23"
+notidue = "2023-11-11"
 
 [[params.cfp.list]]
 enable = 1
@@ -612,23 +612,23 @@ notidue = "2023-03-21"
 enable = 1
 name = "APSys"
 rank = ""
-site = "https://ap-sys.org/"
-open = "2022-08-23"
-close = "2022-08-24 23:59:59"
-absddl = "2022-04-29 23:59:00 -04:00"
-submddl = "2022-05-06 23:59:00 -04:00"
-notidue = "2022-06-17"
+site = "https://apsys23.skku.edu/"
+open = "2023-08-24"
+close = "2023-08-25 23:59:59"
+absddl = "2023-04-28 23:59:00 -12:00"
+submddl = "2023-05-05 23:59:00 -12:00"
+notidue = "2023-06-23"
 
 [[params.cfp.list]]
 enable = 1
 name = "RTSS"
 rank = "A"
-site = "http://2022.rtss.org/"
-open = "2022-12-05"
-close = "2022-12-08 23:59:59"
+site = "http://2023.rtss.org/"
+open = "2023-12-05"
+close = "2023-12-08 23:59:59"
 absddl = "N/A"
-submddl = "2022-05-26 23:59:00 -12:00"
-notidue = "2022-08-05"
+submddl = "2023-05-25 23:59:00 -12:00"
+notidue = "2023-08-04"
 
 [[params.cfp.list]]
 enable = 1
